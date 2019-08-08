@@ -1,0 +1,174 @@
+
+
+:root {
+    --color-primary:#D14531; //rgba(209, 69, 49, 1)
+    --color-primary-light:#fe5239; //rgba(254, 82, 57, 1)
+    --color-primary-dark:#7f291d; //rgba(127, 41, 29, 1)
+    --color-grey-blue:#4D4C6B; //rgba(77, 76, 107, 1)
+    --color-grey-blue-lighter:#616087; //rgba(77, 76, 107, 1)
+    --color-grey-blue-light:#807F9E; // rgba(128, 127, 158, 1)
+    --color-grey-blue-dark:#1A1938; //rgba(26, 25, 56, 1)
+
+    --color-grey-light-1:#faf9f9;
+    --color-grey-light-2:#f4f2f2;
+    --color-grey-light-3:#f0eeee;
+    --color-grey-light-4:#ccc;
+
+    --color-grey-dark-1:#333;
+    --color-grey-light-3:#777;
+    --color-grey-dark-3:#999;
+    
+    --shadow-dark: 0 2rem 6rem rgba(0,0,0,.3);
+    --shadow-light: 0 2rem 5rem rgba(0,0,0,.6);
+}
+
+$bp-largest:110em; //1750 px
+$bp-largest-2:92.4em; //1470 px
+$bp-larger:86.5em; //1385 px
+$bp-larger-2:80em; //1270 px
+$bp-large:75em; //1200 px
+$bp-slider:66.3em; // 1096 px
+$bp-medium:61.75em; // 988 px
+$bp-medium-2:50em; // 800 px
+$bp-small:42em; // 669px
+$bp-small-2:36em; // 573px
+$bp-small-3:30em; // 480px
+$bp-small-4:25.5em; // 411px
+$bp-small-5:21.8em; // 350px
+
+
+ #preloader {
+    background-color: rgba($color: #ffff, $alpha: .5);
+    position: fixed;
+    top:0;
+    bottom: 0;
+    left:0;
+    right: 0;
+    z-index: 200;
+}
+#status {
+    background-image: url(../img/preloader.svg);
+    background-repeat: no-repeat;
+    width: 25rem;
+    height: 25rem;
+    position: absolute;
+    left: 50%;
+    top:50%;
+    margin-left: 5rem;
+    margin-top: -2rem;
+
+    @media only screen and (max-width:$bp-medium) {
+        width: 20rem;
+        height: 20rem;
+        margin-left: -4rem;
+        margin-top: -10rem;
+        background-image: url(../img/preloaderXS.svg);
+    }
+   
+   
+}  
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+    @media only screen and (max-width:$bp-large) {
+        font-size: 58.5%;
+    }
+    @media only screen and (max-width:$bp-medium-2) {
+        font-size: 53.5%;
+    }
+    @media only screen and (max-width:$bp-small-2) {
+        font-size: 48.5%;
+    }
+    @media only screen and (max-width:$bp-small-3) {
+        font-size: 43.5%;
+    }
+    @media only screen and (max-width:$bp-small-4) {
+        font-size: 39.5%;
+    }
+
+}
+
+body {
+    font-family: 'Ubuntu';
+    font-weight: 400;
+    line-height: 1.6;
+    color: var(--color-grey-blue);
+/*     background-image: linear-gradient(to right bottom, var(--color-grey-blue-light), var(--color-grey-blue));
+    background-size: cover;
+    background-repeat: no-repeat; */
+    background: white;
+
+    min-height: 100vh;
+}
+
+
+@keyframes fade {
+    0% {
+      opacity: 1;
+    }
+    25% {
+      opacity: 1;
+    }
+    75% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+
+  
+@keyframes moveInLeft{
+    0% {
+        opacity: 0;
+        transform: translateX(-10rem);
+
+    }
+    80% {
+        transform: translateX(1rem);
+    }
+    100% {
+         opacity: 1;
+         transform: translate(0);
+    }
+} 
+
+@keyframes moveInRight{
+    0% {
+        opacity: 0;
+        transform: translateX(10rem);
+
+    }
+    80% {
+        transform: translateX(-1rem);
+    }
+    100% {
+         opacity: 1;
+         transform: translate(0);
+    }
+} 
+
+
+@keyframes moveInBottom{
+    0% {
+        opacity: 0;
+        transform: translateY(10rem);
+
+    }
+    100% {
+         opacity: 1;
+         transform: translate(0);
+    }
+} 
